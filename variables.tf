@@ -4,13 +4,6 @@ variable set {
     namechartwp = name_chart
     namehelpwp  = name_helm
   }))
-  default = [
-    {
-      namewp = wpdefault
-      namechartwp = wordpress
-      namehelpwp  = helmwphart
-    }
-  ]
 }
 #variable set {
 #  type       = list(map(string))
