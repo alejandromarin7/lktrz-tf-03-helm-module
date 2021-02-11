@@ -4,12 +4,14 @@ resource "helm_release" "wordpress" {
   repository = "https://charts.bitnami.com/bitnami"
   chart      = var.name_chart
 
-  dynamic set {
-    for_each = var.settings
+  dynamic "set" {
+    for_each = [for s in set: {
+      name   = s.name
+      chart  = s.chart)
+    }]
     content {
-      name_helm  = set.namewp
-      name_chart = set.namechartwp
+      name_helm  = set.value.name
+      name_chart = set.value.chart
     }
   }
-  
 }
