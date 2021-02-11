@@ -1,3 +1,4 @@
 variable set {
-  type = list(map(string))
+    type = list(map(string))
+  defaul = null
 }
