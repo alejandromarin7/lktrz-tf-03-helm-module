@@ -8,7 +8,7 @@ resource "helm_release" "wordpress" {
     for_each = var.set
     content {
       name_helm  = set.value.name
-      name_chart = set.value.chart
+      name_value = set.value.value
     }
   }
 }
