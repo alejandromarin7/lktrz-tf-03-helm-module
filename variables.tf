@@ -2,7 +2,7 @@ variable name_helm {}
 
 variable name_chart {}
 
-variable "set" {
+variable set {
   default = [
     {
       name   = "helmwphart"
