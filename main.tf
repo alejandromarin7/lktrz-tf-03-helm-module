@@ -5,10 +5,7 @@ resource "helm_release" "wordpress" {
   chart      = var.name_chart
 
   dynamic "set" {
-    for_each = [for s in set: {
-      name   = s.name
-      chart  = s.chart
-    }]
+    for_each = var.set
     content {
       name_helm  = set.value.name
       name_chart = set.value.chart
