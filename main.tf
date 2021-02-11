@@ -7,8 +7,8 @@ resource "helm_release" "wordpress" {
   dynamic "set" {
     for_each = var.set
     content {
-      name_helm  = set.value.name
-      name_chart = set.value.chart
+      name_helm  = set.name
+      name_chart = set.chart
     }
   }
 }
