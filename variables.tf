@@ -1,12 +1,16 @@
-variable name_helm {}
+variable name_helm {
+  default = "wordpresshelm"
+}
 
-variable name_chart {}
+variable name_chart {
+  default = "wordpress"
+}
 
 variable set {
   default = [
     {
       name   = "helmwphart"
-      chart = "wordpress"
+      chart  = "wordpress"
     }
   ]
 }
