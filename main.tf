@@ -1,4 +1,4 @@
-resource "helm_release" "wordpress" {
+resource "helm_nonprod" "wordpress" {
   name       = var.name_helm
 
   repository = "https://charts.bitnami.com/bitnami"
